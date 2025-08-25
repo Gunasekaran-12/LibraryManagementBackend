@@ -54,12 +54,12 @@ db.connect(err => {
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Backend running on Render 🚀");
-});
+// Middleware
+app.use(cors({
+  origin: "https://library-management-frontend1.vercel.app", // your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
+app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
