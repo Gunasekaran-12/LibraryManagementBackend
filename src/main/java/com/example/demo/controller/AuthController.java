@@ -45,4 +45,8 @@ public class AuthController {
             return ResponseEntity.badRequest().body(Map.of("success", false, "message", "Registration failed"));
         }
     }
+    @GetMapping("/register")
+public ResponseEntity<?> testRegister() {
+    return ResponseEntity.ok("Register endpoint is working! Use POST with JSON body.");
+}
 }
