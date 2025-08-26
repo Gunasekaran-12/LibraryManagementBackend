@@ -52,14 +52,10 @@ db.connect(err => {
   console.log("✅ Connected to MySQL database.");
 });
 
-const app = express();
-
-// Middleware
+const cors = require("cors");
 app.use(cors({
-  origin: "https://library-management-frontend1.vercel.app", // your frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  origin: "https://library-management-frontend1.vercel.app", // your frontend
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
 }));
-app.use(express.json());
-
 
