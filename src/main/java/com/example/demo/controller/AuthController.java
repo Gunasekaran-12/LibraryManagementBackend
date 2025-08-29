@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/auth")
 
-// @CrossOrigin(origins = "https://library-management-frontend1.vercel.app")
+ @CrossOrigin(origins = "https://library-management-frontend1.vercel.app")
 public class AuthController {
     
     @Autowired

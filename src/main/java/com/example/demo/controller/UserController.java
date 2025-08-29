@@ -8,7 +8,7 @@ import java.util.*;
 
 @RestController 
 @RequestMapping("/api/users")
-// @CrossOrigin(origins = "https://library-management-frontend1.vercel.app")  // Add this line
+ @CrossOrigin(origins = "https://library-management-frontend1.vercel.app/")  // Add this line
 public class UserController {
   private final UserService service;
   public UserController(UserService s){ this.service = s; }
