@@ -13,7 +13,10 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://library-management-frontend1.vercel.app") // your frontend domain
+                        .allowedOrigins(
+                            "https://library-management-frontend1.vercel.app", // Vercel frontend
+                            "http://localhost:3000" // for local dev
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
@@ -21,4 +24,5 @@ public class CorsConfig {
         };
     }
 }
+
 
